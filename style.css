@@ -367,7 +367,7 @@ select {
     box-shadow: 5px 4px 21px 3px #06dfb5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .grid-wrapper-2 {
         display: inline-block;
         width: 100%;
