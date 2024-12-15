@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    margin: auto;
+}
+
+.container-box {
+    margin: auto;
+    max-width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    font-size: 18px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.header {
+    box-shadow: 0px 3px 13px 4px rgba(224,224,224,0.5);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.menu ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.user ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.user ul img {
+    width: 25px;
+}
+
+.header ul li {
+    cursor: pointer;
+}
+
+.header ul li:hover {
+    color: #06dfb5;
+}
+
+.user .cart {
+    position: relative;
+}
+
+.user .cart::before {
+    content: "1";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -6px;
+    right: -6px;
+    font-size: 10px;
+}
+
+.content {
+    margin: auto;
+    max-width: 1320px;
+    padding-top: 60px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.grid-wrapper-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+}
+
+.card-wrapper .card-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #f4f4f4;
+    box-shadow: 0px 3px 13px 4px rgba(224,224,224,0.5);
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+    gap: 25px;
+}
+
+.delete .trash {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #06dfb5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.delete .trash svg {
+    width: 15px;
+    height: 15px;
+    color: #06dfb5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.items-google {
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    padding: 15px 15px;
+    color: #fff;
+    height: 150px;
+    align-content: center;
+    position: relative;
+    width: 180px;
+}
+.card-wrapper .card-items:nth-child(1) .items-google {
+    background: linear-gradient(354deg, rgba(0, 200, 233, 1) 0%, rgba(0, 90, 201, 1) 100%);
+}
+
+.card-wrapper .card-items:nth-child(2) .items-google {
+    background: linear-gradient(354deg, rgba(204,90,0,1) 0%, rgba(242,164,0,1) 100%);
+}
+
+.items-google::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./images/flower-svgrepo-com.svg') no-repeat center / cover;
+    opacity: 0.1;
+    z-index: 1;  
+}
+
+.items-google .icon {
+    padding: 6px;
+    color: skyblue;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 8px;
+    align-content: center;
+    margin-bottom: 0.8rem;
+}
+
+.items-google .name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.items-google .used {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.status {
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+.status h4 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.status .level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    gap: 30px;
+}
+
+.status .level .dot ul {
+    list-style: none;
+    display: flex;
+    gap: 6px;
+}
+
+.status .level .dot ul li {
+    width: 15px;
+    height: 15px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+}
+
+.card-items:nth-child(1) .status .level .dot ul li:nth-child(1) {
+    background-color: #06dfb5;
+}
+
+.card-items:nth-child(2) .status .level .dot ul li:nth-child(-n+3) {
+    background-color: #06dfb5;
+}
+
+.status .level form {
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+select {
+    background-color: #f4f4f4;
+    border: 1px solid #06dfb5;
+    border-radius: 8px;
+    padding: 6px;
+    width: 100%;
+}
+
+.status .price {
+    padding-top: 8px;
+    font-size: 18px;
+    color: #818181;
+}
+
+.order h3 {
+    font-size: 32px;
+    margin-bottom: 2rem;
+}
+
+.order .subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #818181;
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+.promotion-code form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.promotion-code form .icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.promotion-code form .icon svg {
+    color: #06dfb5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translateX(-50%) translateY(-50%);
+
+}
+
+.promotion-code form input {
+    flex-grow: 1;
+    flex-shrink: 2;
+    background-color: #fff;
+    border: 2px solid #e6e6e6;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.promotion-code form input::placeholder {
+    color: #acaaaa;
+}
+
+.promotion-code button {
+    padding: 10px 15px;
+    min-width: 150px;
+    background-color: transparent;
+    border: 1px solid #06dfb5;
+    color: #06dfb5;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.promotion-code button:hover {
+    background-color: #06dfb5;
+    border: 1px solid #06dfb5;
+    color: #333;
+}
+
+.total {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total .totalpayment {
+    font-size: 18px;
+    font-weight: 400;
+    color: #818181;
+}
+
+.total .price {
+    font-size: 32px;
+    font-weight: 400;
+    color: #06dfb5;
+}
+
+.btn-wrapper {
+    margin-top: 50px;
+}
+
+.btn-wrapper button {
+    padding: 10px 25px;
+    background-color: #06dfb5;
+    color: #333;
+    border: 1px solid #06dfb5;
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 5px 4px 21px 3px #06dfb5;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn-wrapper button:hover {
+    background-color: transparent;
+    color: #06dfb5;
+    border: 1px solid #06dfb5;
+    box-shadow: 5px 4px 21px 3px #06dfb5;
+}
+
+@media (max-width: 768px) {
+    .grid-wrapper-2 {
+        display: inline-block;
+        width: 100%;
+    }
+    .menu {
+        display: none;
+    }
+    .content {
+        padding: 30px 15px;
+    }
+    .logo {
+        font-size: 18px;
+    }
+    .user ul {
+        gap: 12px;
+        font-size: 14px;
+    }
+    .container-box {
+        padding: 25px 15px;
+    }
+    .items-google {
+        width: auto;
+        height: auto;
+    }
+    .card-wrapper {
+        margin-bottom: 80px;
+    }
+    .card-wrapper .card-items {
+        gap: 12px;
+        padding: 15px;
+        display: block;
+    }
+    .order {
+        padding: 0 15px;
+    }
+
+    .btn-wrapper button {
+        width: 100%;
+        font-size: 16px;
+    }
+    .promotion-code button {
+        min-width: auto;
+        font-size: 16px;
+    }
+    .content .card-items div {
+        margin-bottom: 0.5rem;
+    }
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .order {
+        border-top: 1px solid #acaaaa;
+        padding-top: 50px;
+    }
+    .order h3 {
+        font-size: 24px;
+        margin-bottom: 1rem;
+    }
+    .order .subtotal {
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+    .promotion-code form input {
+        font-size: 14px;
+    }
+    .promotion-code form .icon svg {
+        width: 18px;
+        height: 18px;
+    }
+    .total {
+        margin-top: 24px;
+    }
+    .total .totalpayment {
+        font-size: 16px;
+    }
+    .total .price {
+        font-size: 24px;
+    }
+    .btn-wrapper {
+        margin-top: 30px;
+    }
+}
